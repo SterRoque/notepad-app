@@ -4,10 +4,11 @@ import MasonryList from "@react-native-seoul/masonry-list";
 import { notes } from "./src/constants/notes";
 import { Card } from "./src/components/card/card";
 import { INote } from "./src/interfaces/note-interface";
+import "./global.css";
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View className="flex-1">
       <StatusBar style="auto" />
       <MasonryList
         keyExtractor={(item) => item.id}
@@ -19,12 +20,3 @@ export default function App() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#000",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
