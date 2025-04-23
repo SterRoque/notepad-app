@@ -1,11 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import MasonryList from "@react-native-seoul/masonry-list";
+import { notes } from "./src/constants/notes";
+import { Card } from "./src/components/card/card";
+import { INote } from "./src/interfaces/note-interface";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
+      <MasonryList
+        keyExtractor={(item) => item.id}
+        style={{ gap: 10, padding: 15 }}
+        numColumns={2}
+        data={notes}
+        renderItem={({ item }) => <Card note={item as INote} />}
+      />
     </View>
   );
 }
@@ -13,8 +23,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#000",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
