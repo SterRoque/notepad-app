@@ -8,7 +8,7 @@ import { ButtonAdd } from '../components/button-add';
 
 export default function HomeScreen() {
    return (
-      <View className='flex-1 bg-[#f7f7f7] p-4 dark:bg-black'>
+      <View className='flex-1 bg-[#f7f7f7] p-6 dark:bg-black'>
          <Text className='my-7 text-3xl font-bold dark:text-white'>
             Anotações
          </Text>
