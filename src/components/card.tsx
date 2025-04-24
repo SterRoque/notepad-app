@@ -9,7 +9,7 @@ type CardProps = {
 
 export function Card({ note }: CardProps) {
    return (
-      <TouchableOpacity className='mb-[10px] gap-5 rounded-xl bg-white p-8 dark:bg-[#242424]'>
+      <TouchableOpacity className='mb-[10px] gap-5 rounded-xl bg-white p-5 dark:bg-[#242424]'>
          <Text className='text-[18px] font-bold dark:text-white'>
             {truncateText(note.title)}
          </Text>
