@@ -5,8 +5,10 @@ import { Card } from '../components/card';
 import { INote } from '../interfaces/note-interface';
 import { Input } from '../components/input';
 import { ButtonAdd } from '../components/button-add';
+import { useRouter } from 'expo-router';
 
 export default function HomeScreen() {
+   const router = useRouter();
    return (
       <View className='flex-1 bg-[#f7f7f7] p-6 dark:bg-black'>
          <Text className='my-7 text-3xl font-bold dark:text-white'>
@@ -22,7 +24,7 @@ export default function HomeScreen() {
             data={notes}
             renderItem={({ item }) => <Card note={item as INote} />}
          />
-         <ButtonAdd />
+         <ButtonAdd onPress={() => router.push('/create-note')} />
       </View>
    );
 }
