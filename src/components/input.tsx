@@ -11,7 +11,7 @@ export function Input({ ...rest }: TextInputProps) {
             className='absolute left-4 top-4 z-10'
          />
          <TextInput
-            className='relative rounded-full bg-[#ededed] px-12 py-4 text-lg placeholder:text-[#a8a8a8] dark:bg-[#1f1f1f] dark:text-white dark:placeholder:text-[#5c5c5c]'
+            className='relative rounded-full bg-[#ededed] px-12 py-4 text-lg placeholder:text-[#a8a8a8] dark:bg-[#1f1f1f] dark:text-white'
             {...rest}
          />
       </View>
